@@ -139,7 +139,7 @@ class MyCustomExecutionServerCommandHandler(CustomExecutionServerCommandHandler)
         t += ' %s' % test_path
         output, robotretcode = self._process_runner.execute(t, execution_id)
 
-        now = time.strftime("%b-%d-%Y_%H.%M.%S")
+        now = time.strftime('%Y-%m-%d_%H%M%S')
         # print('execute result: %d: %s\n' % (retcode, output))
 
         zipname = '%s_%s.zip' % (test_path, now)
